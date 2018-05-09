@@ -1,0 +1,191 @@
+body {
+  background: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+a {
+  color: #333;
+  font-weight: 550;
+}
+
+a:hover {
+  color: #b2cf3d;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.name {
+  border-bottom: 5px solid #333;
+  padding: 2rem 1rem;
+}
+
+.name__heading {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+}
+
+.name__color {
+  color: #b2cf3d;
+}
+
+.introduction {
+  border-bottom: 5px solid #333;
+  padding: 1rem;
+}
+
+.introduction__link-container {
+  text-align: right;
+}
+
+.contact-information {
+  border-bottom: 1.5rem solid #b2cf3d;
+  padding: 1rem;
+}
+
+.skills, .education, .hobbies {
+  border-bottom: 5px solid #333;
+  padding: 1rem;
+}
+
+.skills__list, .hobbies__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.institution {
+  padding-bottom: 1rem;
+}
+
+.institution__degree, .institution__name, .institution__location, .institution__duration {
+  margin: 0;
+}
+
+.experience {
+  padding: 1rem;
+  border-bottom: 5px solid #333;
+}
+
+.job {
+  margin-bottom: 1.5rem;
+}
+
+.job__position {
+  margin: 0;
+}
+
+.job__employer {
+  margin: .25rem 0 .5rem;
+  font-weight: bold;
+}
+
+.job__description {
+  margin: 0;
+}
+
+.job__duties {
+  margin: 1rem 0;
+}
+
+.job__duty {
+  font-size: 0.9em;
+}
+
+.footer__text {
+  color: #aaa;
+  text-align: center;
+  font-size: 0.5em;
+}
+
+.footer__link {
+  color: #aaa;
+}
+
+@media screen and (min-width: 840px) {
+  body:before {
+    content: 'Sorry, it seems your browser doesn\'t support display: grid. Below is the fallback.';
+    display: block;
+    padding: 2rem;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  @supports (display: grid) {
+    body:before {
+      display: none;
+    }
+
+    .resume {
+      display: grid;
+      grid-template-columns: 33%;
+      grid-template-areas: "name name name" "intro intro contact" "skills experience experience" "education experience experience" "hobbies experience experience";
+    }
+
+    .name {
+      grid-area: name;
+      padding: 3rem 3rem 0 3rem;
+    }
+
+    .name__heading {
+      font-size: 80px;
+    }
+
+    .introduction {
+      grid-area: intro;
+      padding: 0 1rem 0 3rem;
+    }
+
+    .contact-information {
+      border-bottom: 5px solid #333;
+      border-left: 5px solid #333;
+      padding: 0 3rem 0 1rem;
+    }
+
+    .contact-information__heading {
+      display: none;
+    }
+
+    .skills {
+      grid-area: skills;
+      border-right: 5px solid #333;
+      padding: 0 1rem 0 3rem;
+      text-align: right;
+    }
+
+    .education {
+      grid-area: education;
+      border-right: 5px solid #333;
+      padding: 0 1rem 0 3rem;
+      text-align: right;
+    }
+
+    .hobbies {
+      grid-area: hobbies;
+      border-right: 5px solid #333;
+      border-bottom: none;
+      padding: 0 1rem 0 3rem;
+      text-align: right;
+    }
+
+    .skills_list li,
+    .hobbies__list li {
+      white-space: nowrap;
+    }
+
+    .experience {
+      grid-area: experience;
+      border-bottom: 1.5rem solid #b2cf3d;
+      padding: 0 3rem 0 1rem;
+    }
+  }
+}
