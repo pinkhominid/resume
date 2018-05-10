@@ -143,6 +143,11 @@ a:hover {
     .introduction {
       grid-area: intro;
       padding: 0 1rem 0 3rem;
+      display: flex;
+    }
+
+    .introduction__content {
+      align-self: center;
     }
 
     .contact-information {
@@ -151,6 +156,7 @@ a:hover {
       padding: 0 3rem 0 1rem;
     }
 
+    .introduction__heading,
     .contact-information__heading {
       display: none;
     }
