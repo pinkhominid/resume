@@ -111,7 +111,7 @@ a:hover {
   color: #aaa;
 }
 
-@media screen and (min-width: 840px) {
+@media print, screen and (min-width: 840px) {
   body:before {
     content: 'Sorry, it seems your browser doesn\'t support display: grid. Below is the fallback.';
     display: block;
@@ -127,7 +127,7 @@ a:hover {
 
     .resume {
       display: grid;
-      grid-template-columns: 33%;
+      grid-template-columns: 34%;
       grid-template-areas: "name name name" "intro intro contact" "skills experience experience" "education experience experience" "hobbies experience experience";
     }
 
@@ -183,15 +183,25 @@ a:hover {
       text-align: right;
     }
 
-    .skills_list li,
-    .hobbies__list li {
-      white-space: nowrap;
-    }
-
     .experience {
       grid-area: experience;
       border-bottom: 1.5rem solid #b2cf3d;
       padding: 0 3rem 0 1rem;
+    }
+  }
+  @media print {
+    body {
+      font-size: 12.25px;
+    }
+    .name {
+      padding-top: 0;
+    }
+    /* chrome print to pdf color is really off */
+    .name__color {
+      color: #e5ff6f;
+    }
+    .name__heading {
+      font-size: 40px;
     }
   }
 }
