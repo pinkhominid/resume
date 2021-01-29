@@ -1,0 +1,27 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@web/dev-server": "^0.1.5"
+  },
+  "scripts": {
+    "start": "wds -wor docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinkhominid/resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/pinkhominid/resume/issues"
+  },
+  "homepage": "https://github.com/pinkhominid/resume#readme"
+}
